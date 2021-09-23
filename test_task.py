@@ -8,7 +8,7 @@ def test_integer_convert_to_bytes():
     assert output == b'\x04\x00'
 
 
-# Параметризированный тест
+# Параметризованный тест
 @pytest.mark.parametrize('input, expected', [(3.5, 3), (12.9, 12), ('10', 10), (' -10 ', -10), ('012', 12),
                                              ('6_27', 627), (' +15 ', 15), (10., 10), (3.33e-10, 0),
                                              (0o177, 127), (0x9ff, 2559), (0b101010, 42)])
@@ -38,7 +38,7 @@ def test_dict_clear(dictionary):
     assert dictionary.clear() is None
 
 
-# Параметризированный тест
+# Параметризованный тест
 @pytest.mark.parametrize('key, default, expected', [('feb', None, 28), ('dec', None, 31), ('sep', 'def', 'def')])
 def test_dict_get(key, default, expected, dictionary):
     lenght_old = len(dictionary)
